@@ -1,0 +1,7 @@
+.banner-container {
+    height: 50rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
