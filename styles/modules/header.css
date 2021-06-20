@@ -1,0 +1,62 @@
+.site-header {
+    width: 100%;
+    background-image: linear-gradient(#395E9F, #020213);
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 2rem;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-navigation__list {
+    display: flex;
+}
+
+.main-navigation__item {
+    padding: 1.5rem;
+}
+
+.header_university_name {
+    color: #ececf1;
+}
+
+.main-navigation__link:link,
+.main-navigation__link:visited {
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 1rem;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    background-size: 220%;
+}
+
+.main-navigation__link:link:hover,
+.main-navigation__link:link:active,
+.main-navigation__link:visited:hover,
+.main- navigation__link:visited:active {
+    background-position: 100%;
+    background-image: linear-gradient(100deg, transparent 0%, transparent 50%, #fff 50%);
+    color: #0000FF;
+}
+
+@media screen and (min-width: 900px) {
+    .navigation__btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 901px) {
+    .main-navigation__nav {
+        display: none;
+    }
+}
