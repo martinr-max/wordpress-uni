@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 0.5fr;
+    grid-template-rows: 0.1fr .3fr  0.2fr;
+    grid-row-gap: 4rem;
+}
+
+.post-list {
+    grid-column: 2;
+    grid-row: 2;
+
+}
+
+.post-item {
+    font-size: 1.6rem;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid #382121;
+    padding: 2rem;
+}
+
+.post-title {
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+.post-item a {
+    color: #382121;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    
+}
+
+.post-metabox {
+    background-color: rgb(252, 250, 164);
+    padding: 1rem 0;
+
+}
+
+.post-metabox p {
+    padding-left: 1rem;
+}
+
+.generic-content p {
+    padding: 1.5rem 0;
+}
+
+.post-btn {
+    color: #ececf1 !important;
+    font-weight: 300 !important;
+}
+

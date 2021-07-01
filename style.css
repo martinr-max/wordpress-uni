@@ -7,6 +7,13 @@ Version: 2.0
 @import './styles/modules/header.css';
 @import './styles/modules/navigation.css';
 @import './styles/modules/banner.css';
+@import './styles/modules/page.css';
+@import './styles/modules/login.css';
+@import './styles/modules/note.css';
+@import './styles/modules/event.css';
+@import './styles/modules/footer.css';
+@import './styles/modules/front-page.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -35,11 +42,44 @@ body {
     font-size: 2.7rem;
     font-weight: 400;
     letter-spacing: 2px;
-    line-break: 1.5;
+    text-transform: capitalize;
+}
+
+.heading-2 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 1.4rem 0;
+    text-transform: capitalize;
+}
+
+.heading-3 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 1.4rem 0;
+    text-transform: capitalize;
 }
 
 .min-list {
     list-style: none;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    background-color: #382121;
+    border-radius: 20px;
+    color: #ececf1 !important;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: rgb(92, 54, 54) ;
 }
 
 @media screen and (max-width: 901px) {
@@ -47,3 +87,4 @@ body {
         font-size: 50%;
     }
 }
+

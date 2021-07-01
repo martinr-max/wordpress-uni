@@ -1,0 +1,33 @@
+/* Customize Login Screen */
+body.login .button-primary {
+  background-color: #382121;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+body.login .button-primary:hover,
+body.login .button-primary:active,
+body.login .button-primary:focus {
+  background-color: rgb(92, 54, 54) ; 
+}
+
+body.login {
+  background-color: white;
+}
+
+#login {
+  width: 40%;
+}
+
+.login h1 a {
+  color: #000;
+  font-size: 3.5rem;
+  font-weight: 300;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  text-transform: capitalize;
+}

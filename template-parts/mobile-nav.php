@@ -6,10 +6,18 @@
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">About us</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Curriculums</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Events</a></li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="<?php echo site_url('/'); ?>">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="<?php echo site_url('/about-us'); ?>">About us</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="<?php echo site_url('/blog'); ?>">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="<?php echo site_url('/events'); ?>">Events</a>
+                </li>
             </ul>
         </nav>
     </div>

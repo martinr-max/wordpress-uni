@@ -1,0 +1,124 @@
+.note-list {
+    grid-row: 3;
+    grid-column: 2;
+}
+.note-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.note-generic-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.note-item {
+    border-bottom: 1px solid #382121;
+    border-top: 1px solid #382121;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0;
+
+}
+
+#note-title {
+    font-weight: 700;
+    outline: none;
+}
+
+#note-title input:focus {
+    border: 1px solid #382121;
+}
+
+
+.note-generic-content input, textarea{
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: none;
+    resize:none;
+    letter-spacing: 1.5px;
+    padding: 1.5rem;
+}
+
+.note-generic-content textarea{
+    overflow: hidden;
+    resize:none;
+    outline: none;
+}
+
+.note-content-field textarea:focus{
+    outline: none !important;
+    padding: 1.5rem;
+
+}
+
+.note-active-field {
+    border: 1px solid gray;
+}
+
+.update-note {
+    display: none;
+}
+
+.update-note-visible {
+    display: block;
+    margin: 1.5rem;
+}
+
+.create-note {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ececf1;
+    width: 100%;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.create-note-title {
+    padding-bottom: 1rem;
+}
+
+.create-note-content {
+    width: 90%;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    outline: none;
+    border-radius: 3px;
+
+}
+
+.create-note-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.create-note input {
+    width: 90%;
+    padding: 1.5rem;
+    font-family: inherit;
+    border: none;
+    font-size: 1.6rem;
+    outline: none;
+    border-radius: 3px;
+}
+
+.create-note input:focus, .create-note textarea:focus {
+    outline: 1px solid #382121;
+}
+
+.create-save-note-btn {
+    margin: 2rem;
+}
+

@@ -1,0 +1,22 @@
+.event-summary__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #382121;
+    width: 9rem;
+    height: 6rem;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.event-summary__date span {
+    color: #ececf1 !important;
+}
+
+
+
+.event-summary {
+    display: flex;
+}
