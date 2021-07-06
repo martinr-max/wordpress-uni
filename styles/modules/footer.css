@@ -4,6 +4,9 @@
     height: 30rem;
     background-color: #382121;
     color: #ececf1;
+    width: 60%;
+    margin: 0 auto;
+    left: 40rem;
 }
 
 .footer-content {
@@ -18,7 +21,6 @@
     display: flex;
     justify-content: space-around;
     width: 60%;
-    
 }
 
 .nav-list {
@@ -33,13 +35,12 @@
 .nav-list li a {
     color: #ececf1;
     font-size: 1.8rem;
-    text-decoration:  none;
+    text-decoration: none;
 }
 
 .nav-list li a:hover {
     color: #b4b4bd;
     text-decoration: underline;
-    
 }
 
 .social-icons-list {
@@ -48,4 +49,23 @@
 
 .social-icons-list li {
     padding: 1rem;
+}
+
+@media screen and (max-width: 430px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer {
+        height: initial;
+    }
+    .footer-navigation {
+        width: 100%;
+        justify-content: initial;
+    }
+    .nav-list ul {
+        line-height: 2;
+    }
+    .nav-list li a {
+        font-size: 2rem;
+    }
 }

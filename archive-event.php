@@ -2,14 +2,15 @@
 
 get_header();
  ?>
- <section class="banner-container-page" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-        url(<?php echo get_theme_file_uri('/images/michael-longmire-L9EV3OogLh0-unsplash.jpg') ?>);">
+ <section class="banner-container-page" id="event-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+        url(<?php echo get_theme_file_uri('/images/teemu-paananen-bzdhc5b3Bxs-unsplash.jpg') ?>);">
         <div class="banner-text">
-          <h1 class="heading-1 " id="banner-title">Events calender</h1>
-          <h1 class="heading-2">All  university Events</h1>
+          <h1 class="heading-1 " id="banner-title">All Events</h1>
         </div>
   </section>
-<div class="container">
+ 
+<section class="container">
+
 <div class="post-list">
 
 <?php
@@ -25,7 +26,7 @@ get_header();
 ?>
 
 </div>
-</div>
+  </section>
 
 <?php get_footer();
 

@@ -1,11 +1,41 @@
 <?php
+require get_theme_file_path('/include/search-path.php');
+function pageBanner($args = NULL) {
+  
+  if (!$args['title']) {
+    $args['title'] = get_the_title();
+  }
+
+  if (!$args['subtitle']) {
+    $args['subtitle'] = get_field('page_banner_subtitle');
+  }
+
+  if (!$args['photo']) {
+    if (get_field('page_banner_background_image')) {
+      $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
+    } else {
+      $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
+    }
+  }
+}
+
+function custom_rest_api() {
+  register_rest_field( 'post', 'authorName', array(
+    'get_callback' => function() { 
+      return get_the_author();
+    }
+  ));
+}
+
+add_action('rest_api_init', 'custom_rest_api');
 
 function university_files() {
-  wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ));
+  wp_enqueue_script('main-university-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ));
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
   wp_enqueue_style('university_main_styles', get_stylesheet_uri());
-  wp_localize_script('custom-script', 'universityData', array(
+  wp_localize_script('main-university-js', 'universityData', array(
+    'root_url' => get_site_url(),
     'nonce' => wp_create_nonce('wp_rest')
   ));
 }
@@ -76,7 +106,7 @@ function university_post_types() {
     'menu_icon' => 'dashicons-welcome-learn-more'
   ));
 
-  register_post_type('Note', array(
+  register_post_type('note', array(
     'capability_type'=> 'note',
     'map_meta_cap' => true,
     'show_in_rest' => true,
@@ -92,6 +122,8 @@ function university_post_types() {
     ),
     'menu_icon' => 'dashicons-welcome-write-blog'
   ));
+
+
 }
 
 add_action('init', 'university_post_types');
@@ -135,4 +167,15 @@ function custom_login_title() {
 }
 
 
-
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Primary Sidebar' ),
+            'description'   => __( 'A short description of the sidebar.' )
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}

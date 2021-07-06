@@ -1,21 +1,15 @@
-.container {
-    display: grid;
-    grid-template-columns: 0.5fr 2.5fr 0.5fr;
-    grid-template-rows: 0.1fr .3fr  0.2fr;
-    grid-row-gap: 4rem;
-}
-
 .post-list {
-    grid-column: 2;
     grid-row: 2;
-
 }
 
 .post-item {
     font-size: 1.6rem;
     letter-spacing: 1.2px;
-    border-bottom: 1px solid #382121;
     padding: 2rem;
+}
+
+.post-item:not(:last-child) {
+    border-bottom: 1px solid #382121;
 }
 
 .post-title {
@@ -28,13 +22,11 @@
     text-decoration: none;
     letter-spacing: 1.5px;
     font-weight: bold;
-    
 }
 
 .post-metabox {
     background-color: rgb(252, 250, 164);
     padding: 1rem 0;
-
 }
 
 .post-metabox p {
@@ -50,3 +42,12 @@
     font-weight: 300 !important;
 }
 
+.single-program-img {
+    background-position: center !important;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+}

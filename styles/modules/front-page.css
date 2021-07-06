@@ -1,6 +1,5 @@
 .posts-section {
     display: flex;
-    height: 40rem;
 }
 
 .posts-section a {
@@ -9,7 +8,7 @@
 }
 
 .posts-section a:hover {
-   text-decoration: underline;
+    text-decoration: underline;
 }
 
 .full-width-split__one {
@@ -18,27 +17,52 @@
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
+    background-color: #ececf1;
+}
+
+.full-width-split__inner {
+    width: 90%;
+    margin-top: 2rem;
 }
 
 .full-width-split__two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: 1.6rem;
     background-color: rgb(252, 250, 164);
 }
 
-.full-width-split__inner {
-    padding: 5rem;
-}
-
 .front-page-posts-buttons {
     padding: 2rem 0;
+    position: absolute;
+    bottom: 2rem;
 }
 
 .event-summary {
     display: flex;
     align-items: center;
     padding: 1rem 0;
+}
+
+.full-width-split__one,
+.full-width-split__two {
+    justify-content: flex-start;
+    position: relative;
+    height: 48rem;
+    width: 50%;
+}
+
+.event-summary__content {
+    width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+    .posts-section {
+        flex-direction: column;
+    }
+    .full-width-split__one,
+    .full-width-split__two {
+        width: 100%;
+    }
 }

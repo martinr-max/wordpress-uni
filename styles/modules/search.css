@@ -1,0 +1,144 @@
+.search-overlay {
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 110;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .96);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.09);
+    transition: opacity .3s, transform .3s, visibility .3s;
+    box-sizing: border-box;
+}
+
+.search-overlay p {
+    padding-top: 15px;
+}
+
+.event-summary p {
+    padding-top: 0;
+}
+
+.event-summary {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.search-overlay--active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.search_container {
+    position: absolute;
+    top: 4rem;
+    border: none;
+    width: 100%;
+    background-color: #ececf1;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    font-size: 3rem !important;
+    margin-left: 9rem;
+    padding: 2rem;
+}
+
+.search_container input {
+    border: none;
+    padding: 2rem 0;
+    background-color: #ececf1;
+    width: 100%;
+    font-size: 2.5rem;
+    font-family: inherit;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #736D6D;
+    outline: none;
+}
+
+.search_container input::placeholder {
+    margin-left: 9rem;
+}
+
+.search_container input:focus {
+    border-bottom: 3px solid green;
+}
+
+.search-icon-close {
+    font-size: 4rem;
+    color: rgb(197, 54, 54);
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.top {
+    height: 10rem;
+}
+
+.search_results_container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+}
+
+.search_results {
+    width: 100%;
+}
+
+.result_list {
+    font-size: 2rem;
+    line-height: 2.2;
+    width: 100%;
+}
+
+.result_list li a {
+    color: #382121;
+    font-size: 2.3rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-bottom: 1px solid #382121;
+    width: 50%;
+    display: inline-block;
+    padding: 2rem;
+}
+
+.result_list li a:hover {
+    text-decoration: underline;
+    color: #5c3636;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #382121 transparent #382121 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

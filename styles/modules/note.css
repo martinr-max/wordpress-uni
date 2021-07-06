@@ -2,6 +2,7 @@
     grid-row: 3;
     grid-column: 2;
 }
+
 .note-header {
     display: flex;
     align-items: center;
@@ -9,7 +10,7 @@
     padding-bottom: 2rem;
 }
 
-.note-generic-content{
+.note-generic-content {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -22,38 +23,37 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem 0;
-
 }
 
 #note-title {
     font-weight: 700;
     outline: none;
+    width: 30%;
 }
 
 #note-title input:focus {
     border: 1px solid #382121;
 }
 
-
-.note-generic-content input, textarea{
+.note-generic-content input,
+textarea {
     font-family: inherit;
     font-size: 1.6rem;
     border: none;
-    resize:none;
+    resize: none;
     letter-spacing: 1.5px;
     padding: 1.5rem;
 }
 
-.note-generic-content textarea{
+.note-generic-content textarea {
     overflow: hidden;
-    resize:none;
+    resize: none;
     outline: none;
 }
 
-.note-content-field textarea:focus{
+.note-content-field textarea:focus {
     outline: none !important;
     padding: 1.5rem;
-
 }
 
 .note-active-field {
@@ -79,6 +79,7 @@
     width: 100%;
     justify-content: center;
     border-radius: 3px;
+    margin-top: 2rem;
 }
 
 .create-note-title {
@@ -93,7 +94,6 @@
     font-size: 1.6rem;
     outline: none;
     border-radius: 3px;
-
 }
 
 .create-note-header {
@@ -114,11 +114,11 @@
     border-radius: 3px;
 }
 
-.create-note input:focus, .create-note textarea:focus {
+.create-note input:focus,
+.create-note textarea:focus {
     outline: 1px solid #382121;
 }
 
 .create-save-note-btn {
     margin: 2rem;
 }
-

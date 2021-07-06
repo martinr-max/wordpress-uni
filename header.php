@@ -5,9 +5,13 @@
     <?php wp_head(); ?>
   </head>
   <body> 
-  <?php get_template_part('template-parts/mobile-nav') ?>
+  <div class="page-container">
+
   <header class="site-header">
     <div class="main-navigation">
+
+   <?php   get_template_part('template-parts/mobile-nav'); ?>
+
     <h1 class="header_university_name heading-1">
           <strong>Fictional</strong> University
         </h1>
@@ -17,15 +21,13 @@
                   <a class="main-navigation__link" href="<?php echo get_site_url('/'); ?>">Home</a>
                 </li>
                 <li class="main-navigation__item">
-                  <a class="main-navigation__link" href="<?php echo site_url('/about-us'); ?>">About us</a>
-                </li>
-                <li class="main-navigation__item">
                   <a class="main-navigation__link" href="<?php echo site_url('/blog'); ?>">Blog</a>
                 </li>
                 <li class="main-navigation__item">
                   <a class="main-navigation__link" href="<?php echo site_url('/events'); ?>">Events</a>
                 </li>
             </ul>
+
             <div class="buttons">
                 <?php if(is_user_logged_in()) { ?>
                     <a class="btn" href="<?php echo site_url('/my-notes'); ?>">My Notes</a>
@@ -35,9 +37,13 @@
                     <a class="btn" href="<?php echo wp_login_url(); ?>">Log in</a>
                     <a class="btn" href="<?php echo wp_registration_url(); ?>">sign up</a>
                 <?php } ?>
-                
+
                 </div>
+                <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
+                  
+
         </nav>
+
     </div>  
       
     </header>

@@ -1,9 +1,12 @@
-<?php get_header(); ?>
-<section class="banner-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-                       rgba(0, 0, 0, 0.5)),
- url(<?php echo get_theme_file_uri('/images/michael-longmire-L9EV3OogLh0-unsplash.jpg') ?>);">
-        
 
+<?php get_header(); ?>
+<section class="banner-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+                url(<?php echo get_theme_file_uri('/images/michael-longmire-L9EV3OogLh0-unsplash.jpg') ?>);">
+    <div class="banner-text">
+      <h1 class="heading-1"> Welcome to <strong>Fictional University</strong></h1>
+      <h2 class="heading-2">Discover our Programs:</h2>
+      <p><a class="btn" href="<?php echo get_post_type_archive_link('program') ?>">Find a program </a></p>   
+    </div>
 </section>
 <section class="posts-section">
     <div class="full-width-split__one">
@@ -34,7 +37,7 @@
           }
         ?>
         
-        <p class="front-page-posts-buttons"><a href="<?php echo get_post_type_archive_link('event') ?>" class="btn btn--blue">View All Events</a></p>
+        <p class="front-page-posts-buttons"><a href="<?php echo get_post_type_archive_link('event') ?>" class="btn">View All Events</a></p>
 
       </div>
     </div>
